@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Pandora
 {
-    public partial class Form1 : Form
+    public partial class NewClient : Form
     {
-        NewClient newClient = new NewClient();
-        public Form1()
+        public NewClient()
         {
             InitializeComponent();
-        }
-
-        private void новыйКлиентToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            newClient.ShowDialog();
         }
     }
 }

@@ -30,10 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.новыйКлиентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новыйКлиентToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,19 @@
             this.новыйКлиентToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.новыйКлиентToolStripMenuItem.Text = "Файл";
             // 
+            // новыйКлиентToolStripMenuItem1
+            // 
+            this.новыйКлиентToolStripMenuItem1.Name = "новыйКлиентToolStripMenuItem1";
+            this.новыйКлиентToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.новыйКлиентToolStripMenuItem1.Text = "Новый клиент";
+            this.новыйКлиентToolStripMenuItem1.Click += new System.EventHandler(this.новыйКлиентToolStripMenuItem1_Click);
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.выходToolStripMenuItem.Text = "Выход";
+            // 
             // помощьToolStripMenuItem
             // 
             this.помощьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -68,20 +81,8 @@
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
-            // 
-            // новыйКлиентToolStripMenuItem1
-            // 
-            this.новыйКлиентToolStripMenuItem1.Name = "новыйКлиентToolStripMenuItem1";
-            this.новыйКлиентToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
-            this.новыйКлиентToolStripMenuItem1.Text = "Новый клиент";
-            // 
-            // выходToolStripMenuItem
-            // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.выходToolStripMenuItem.Text = "Выход";
             // 
             // Form1
             // 
