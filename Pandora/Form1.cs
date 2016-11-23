@@ -14,6 +14,8 @@ namespace Pandora
     public partial class Form1 : Form
     {
         NewClient newClient = new NewClient();
+        BindingSource binding1 = new BindingSource();
+        
         public Form1()
         {
             InitializeComponent();
@@ -51,6 +53,24 @@ namespace Pandora
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void maskedTextBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedCells[0].Value != null)
+            {
+                int indexColl = dataGridView1.SelectedCells[0].RowIndex;
+                mtbPhone.Text = dataGridView1[0, indexColl].Value.ToString();
+                tbFam.Text = dataGridView1[1, indexColl].Value.ToString();
+                tbName.Text = dataGridView1[2, indexColl].Value.ToString();
+                tbOtch.Text = dataGridView1[3, indexColl].Value.ToString();
+                tbBonus.Text = dataGridView1[4, indexColl].Value.ToString();
+            }
         }
     }
 }
