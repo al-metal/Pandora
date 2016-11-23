@@ -15,7 +15,7 @@ namespace Pandora
     {
         NewClient newClient = new NewClient();
         BindingSource binding1 = new BindingSource();
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -30,11 +30,11 @@ namespace Pandora
         private void Form1_Load(object sender, EventArgs e)
         {
             string[] clientsArray = File.ReadAllLines("clients.csv", Encoding.GetEncoding(1251));
-            foreach(string str in clientsArray)
+            foreach (string str in clientsArray)
             {
                 dataGridView1.Rows.Add();
             }
-            for(int i = 0; clientsArray.Length > i; i++)
+            for (int i = 0; clientsArray.Length > i; i++)
             {
                 string[] client = clientsArray[i].Split(';');
                 dataGridView1.Rows[i].Cells[0].Value = client[3].ToString();
@@ -57,12 +57,15 @@ namespace Pandora
 
         private void maskedTextBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedCells[0].Value != null)
+            if (dataGridView1.Rows.Count == 0)
+                return;
+
+            if (dataGridView1.SelectedCells[0].Value != null)
             {
                 int indexColl = dataGridView1.SelectedCells[0].RowIndex;
                 mtbPhone.Text = dataGridView1[0, indexColl].Value.ToString();
@@ -70,6 +73,32 @@ namespace Pandora
                 tbName.Text = dataGridView1[2, indexColl].Value.ToString();
                 tbOtch.Text = dataGridView1[3, indexColl].Value.ToString();
                 tbBonus.Text = dataGridView1[4, indexColl].Value.ToString();
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string[] clientsArray = File.ReadAllLines("clients.csv", Encoding.GetEncoding(1251));
+            int indexColl = dataGridView1.SelectedCells[0].RowIndex;
+            clientsArray[indexColl] = tbFam.Text + ";" + tbName.Text + ";" + tbOtch.Text + ";" + mtbPhone.Text + ";" + tbBonus.Text;
+            File.WriteAllLines("clients.csv", clientsArray, Encoding.GetEncoding(1251));
+
+            while (dataGridView1.Rows.Count != 0)
+                dataGridView1.Rows.Remove(dataGridView1.Rows[dataGridView1.Rows.Count - 1]);
+
+            clientsArray = File.ReadAllLines("clients.csv", Encoding.GetEncoding(1251));
+            foreach (string str in clientsArray)
+            {
+                dataGridView1.Rows.Add();
+            }
+            for (int i = 0; clientsArray.Length > i; i++)
+            {
+                string[] client = clientsArray[i].Split(';');
+                dataGridView1.Rows[i].Cells[0].Value = client[3].ToString();
+                dataGridView1.Rows[i].Cells[1].Value = client[0].ToString();
+                dataGridView1.Rows[i].Cells[2].Value = client[1].ToString();
+                dataGridView1.Rows[i].Cells[3].Value = client[2].ToString();
+                dataGridView1.Rows[i].Cells[4].Value = client[4].ToString();
             }
         }
     }
