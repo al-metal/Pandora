@@ -34,9 +34,9 @@
             this.tbOtch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbFam = new System.Windows.Forms.TextBox();
-            this.tbPhone = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSaveClient = new System.Windows.Forms.Button();
+            this.mtbPhone = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // tbName
@@ -87,13 +87,6 @@
             this.tbFam.Size = new System.Drawing.Size(286, 20);
             this.tbFam.TabIndex = 0;
             // 
-            // tbPhone
-            // 
-            this.tbPhone.Location = new System.Drawing.Point(74, 142);
-            this.tbPhone.Name = "tbPhone";
-            this.tbPhone.Size = new System.Drawing.Size(286, 20);
-            this.tbPhone.TabIndex = 3;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -103,22 +96,31 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Телефон";
             // 
-            // button1
+            // btnSaveClient
             // 
-            this.button1.Location = new System.Drawing.Point(139, 195);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Сохранить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSaveClient.Location = new System.Drawing.Point(171, 140);
+            this.btnSaveClient.Name = "btnSaveClient";
+            this.btnSaveClient.Size = new System.Drawing.Size(189, 23);
+            this.btnSaveClient.TabIndex = 4;
+            this.btnSaveClient.Text = "Сохранить";
+            this.btnSaveClient.UseVisualStyleBackColor = true;
+            this.btnSaveClient.Click += new System.EventHandler(this.btnSaveClient_Click);
+            // 
+            // mtbPhone
+            // 
+            this.mtbPhone.Location = new System.Drawing.Point(74, 142);
+            this.mtbPhone.Mask = "0(000)-000-00-00";
+            this.mtbPhone.Name = "mtbPhone";
+            this.mtbPhone.Size = new System.Drawing.Size(91, 20);
+            this.mtbPhone.TabIndex = 3;
             // 
             // NewClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 230);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.tbPhone);
+            this.ClientSize = new System.Drawing.Size(377, 176);
+            this.Controls.Add(this.mtbPhone);
+            this.Controls.Add(this.btnSaveClient);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbFam);
@@ -142,8 +144,8 @@
         private System.Windows.Forms.TextBox tbOtch;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbFam;
-        private System.Windows.Forms.TextBox tbPhone;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSaveClient;
+        private System.Windows.Forms.MaskedTextBox mtbPhone;
     }
 }
