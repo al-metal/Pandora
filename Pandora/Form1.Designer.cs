@@ -89,12 +89,14 @@
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -105,6 +107,7 @@
             this.clmBonus});
             this.dataGridView1.Location = new System.Drawing.Point(0, 27);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(943, 150);
             this.dataGridView1.TabIndex = 1;
             // 
@@ -112,26 +115,31 @@
             // 
             this.clmPhone.HeaderText = "Телефон";
             this.clmPhone.Name = "clmPhone";
+            this.clmPhone.ReadOnly = true;
             // 
             // clmFam
             // 
             this.clmFam.HeaderText = "Фамилия";
             this.clmFam.Name = "clmFam";
+            this.clmFam.ReadOnly = true;
             // 
             // clmName
             // 
             this.clmName.HeaderText = "Имя";
             this.clmName.Name = "clmName";
+            this.clmName.ReadOnly = true;
             // 
             // clmOtch
             // 
             this.clmOtch.HeaderText = "Отчество";
             this.clmOtch.Name = "clmOtch";
+            this.clmOtch.ReadOnly = true;
             // 
             // clmBonus
             // 
             this.clmBonus.HeaderText = "Баллы";
             this.clmBonus.Name = "clmBonus";
+            this.clmBonus.ReadOnly = true;
             // 
             // Form1
             // 
