@@ -25,6 +25,26 @@ namespace Pandora
                 MessageBox.Show("Поле \"Телефон\" обязательно для заполнения", "Ошибка");
                 return;
             }
+
+            bool b = false;
+            string[] clientsArray = File.ReadAllLines("clients.csv", Encoding.GetEncoding(1251));
+            foreach(string str in clientsArray)
+            {
+                string[] client = str.Split(';');
+                string phone = client[3];
+                if (phone == mtbPhone.Text)
+                {
+                    b = true;
+                    break;
+                }
+            }
+
+            if (b)
+            {
+                MessageBox.Show("Данный номер уже имеется в программе", "Внимание!");
+                return;
+            }
+
             StreamWriter sw = new StreamWriter("clients.csv", true, Encoding.GetEncoding(1251));
             sw.WriteLine(tbFam.Text + ";" + tbName.Text + ";" + tbOtch.Text + ";" + mtbPhone.Text + ";" + 0);
             sw.Close();
