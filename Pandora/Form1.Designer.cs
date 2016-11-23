@@ -34,7 +34,14 @@
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clmPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmFam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmOtch = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmBonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -84,11 +91,52 @@
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmPhone,
+            this.clmFam,
+            this.clmName,
+            this.clmOtch,
+            this.clmBonus});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 27);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(943, 150);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // clmPhone
+            // 
+            this.clmPhone.HeaderText = "Телефон";
+            this.clmPhone.Name = "clmPhone";
+            // 
+            // clmFam
+            // 
+            this.clmFam.HeaderText = "Фамилия";
+            this.clmFam.Name = "clmFam";
+            // 
+            // clmName
+            // 
+            this.clmName.HeaderText = "Имя";
+            this.clmName.Name = "clmName";
+            // 
+            // clmOtch
+            // 
+            this.clmOtch.HeaderText = "Отчество";
+            this.clmOtch.Name = "clmOtch";
+            // 
+            // clmBonus
+            // 
+            this.clmBonus.HeaderText = "Баллы";
+            this.clmBonus.Name = "clmBonus";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 343);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -96,6 +144,7 @@
             this.Text = "Лазертаг Pandora";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,6 +158,12 @@
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem помощьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmFam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmOtch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmBonus;
     }
 }
 
