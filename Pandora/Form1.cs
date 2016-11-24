@@ -62,7 +62,7 @@ namespace Pandora
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count == 0)
+            if (dataGridView1.Rows.Count == 0 || dataGridView1.SelectedCells.Count == 0)
                 return;
 
             if (dataGridView1.SelectedCells[0].Value != null)
@@ -100,6 +100,36 @@ namespace Pandora
                 dataGridView1.Rows[i].Cells[3].Value = client[2].ToString();
                 dataGridView1.Rows[i].Cells[4].Value = client[4].ToString();
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (!mtbSearchPhone.MaskCompleted)
+            {
+                MessageBox.Show("Номер введен не полностью или некорректно", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                if(dataGridView1[0, i].Value.ToString() == mtbSearchPhone.Text)
+                {
+                    dataGridView1.ClearSelection();
+                    dataGridView1[0, i].Selected = true;
+                    break;
+                }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tbBonus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar <= 48 || e.KeyChar >= 59) && e.KeyChar != 8)
+                e.Handled = true;
         }
     }
 }
