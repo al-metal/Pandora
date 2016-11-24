@@ -19,7 +19,12 @@ namespace Pandora
         public Form1()
         {
             InitializeComponent();
-
+            FileInfo file = new FileInfo("clients.csv");
+            if(!file.Exists)
+            {
+                FileStream fs = file.Create();
+                fs.Close();
+            }
         }
 
         private void новыйКлиентToolStripMenuItem1_Click(object sender, EventArgs e)
