@@ -116,14 +116,12 @@ namespace Pandora
                 {
                     dataGridView1.ClearSelection();
                     dataGridView1[0, i].Selected = true;
+                    int p = dataGridView1.SelectedRows.Count;
+                    dataGridView1.FirstDisplayedScrollingRowIndex = p;
+                    
                     break;
                 }
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void tbBonus_KeyPress(object sender, KeyPressEventArgs e)
