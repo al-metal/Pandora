@@ -119,7 +119,6 @@
             this.tbBonus.TabIndex = 6;
             this.tbBonus.Text = "0";
             this.tbBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBonus_KeyPress);
-            this.tbBonus.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbBonus_KeyUp);
             // 
             // mtbSearchPhone
             // 
@@ -183,6 +182,7 @@
             this.tbPriceGame.Size = new System.Drawing.Size(62, 20);
             this.tbPriceGame.TabIndex = 18;
             this.tbPriceGame.Text = "0";
+            this.tbPriceGame.TextChanged += new System.EventHandler(this.tbPriceGame_TextChanged);
             this.tbPriceGame.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPriceGame_KeyPress);
             // 
             // label7

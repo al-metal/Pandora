@@ -15,6 +15,7 @@ namespace Pandora
     {
         NewClient newClient = new NewClient();
         BindingSource binding1 = new BindingSource();
+        //проверку на количество бонусов
 
         public Form1()
         {
@@ -91,9 +92,12 @@ namespace Pandora
             tbBonus.Text = lblBonus.Text;
         }
 
-        private void tbBonus_KeyUp(object sender, KeyEventArgs e)
+        private void tbPriceGame_TextChanged(object sender, EventArgs e)
         {
-
+            int price = Convert.ToInt32(tbPriceGame.Text);
+            int bonus = Convert.ToInt32(tbBonus.Text);
+            int payment = price - bonus;
+            lblPayment.Text = payment.ToString();
         }
     }
 }
