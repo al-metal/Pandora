@@ -71,7 +71,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -86,7 +86,7 @@
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -117,7 +117,9 @@
             this.tbBonus.Name = "tbBonus";
             this.tbBonus.Size = new System.Drawing.Size(100, 20);
             this.tbBonus.TabIndex = 6;
+            this.tbBonus.Text = "0";
             this.tbBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBonus_KeyPress);
+            this.tbBonus.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbBonus_KeyUp);
             // 
             // mtbSearchPhone
             // 
@@ -126,7 +128,6 @@
             this.mtbSearchPhone.Name = "mtbSearchPhone";
             this.mtbSearchPhone.Size = new System.Drawing.Size(84, 20);
             this.mtbSearchPhone.TabIndex = 8;
-            this.mtbSearchPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbSearchPhone_KeyPress);
             this.mtbSearchPhone.KeyUp += new System.Windows.Forms.KeyEventHandler(this.mtbSearchPhone_KeyUp);
             // 
             // label5
@@ -155,6 +156,7 @@
             this.lblBonus.Size = new System.Drawing.Size(13, 13);
             this.lblBonus.TabIndex = 15;
             this.lblBonus.Text = "0";
+            this.lblBonus.TextChanged += new System.EventHandler(this.lblBonus_TextChanged);
             // 
             // label1
             // 
@@ -181,6 +183,7 @@
             this.tbPriceGame.Size = new System.Drawing.Size(62, 20);
             this.tbPriceGame.TabIndex = 18;
             this.tbPriceGame.Text = "0";
+            this.tbPriceGame.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPriceGame_KeyPress);
             // 
             // label7
             // 

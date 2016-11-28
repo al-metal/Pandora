@@ -62,8 +62,38 @@ namespace Pandora
         {
             if (mtbSearchPhone.MaskCompleted)
             {
-
+                string[] clientsArray = File.ReadAllLines("clients.csv", Encoding.GetEncoding(1251));
+                if(clientsArray.Length > 0)
+                {
+                    foreach(string str in clientsArray)
+                    {
+                        string[] client = str.Split(';');
+                        if(client[3] == mtbSearchPhone.Text)
+                        {
+                            tbName.Text = client[1];
+                            tbFam.Text = client[0];
+                            tbOtch.Text = client[2];
+                            lblBonus.Text = client[4];
+                        }
+                    }
+                }
             }
+        }
+
+        private void tbPriceGame_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
+        private void lblBonus_TextChanged(object sender, EventArgs e)
+        {
+            tbBonus.Text = lblBonus.Text;
+        }
+
+        private void tbBonus_KeyUp(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
