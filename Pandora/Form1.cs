@@ -48,11 +48,6 @@ namespace Pandora
             Application.Exit();
         }
 
-        private void maskedTextBox1_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
-
         private void tbBonus_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
@@ -98,6 +93,25 @@ namespace Pandora
             int bonus = Convert.ToInt32(tbBonus.Text);
             int payment = price - bonus;
             lblPayment.Text = payment.ToString();
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            string[] clientsArray = File.ReadAllLines("clients.csv", Encoding.GetEncoding(1251));
+            if (clientsArray.Length > 0)
+            {
+                for(int i = 0; clientsArray.Length > i; i++)
+                {
+                    string[] client = clientsArray[i].Split(';');
+                    if (client[3] == mtbSearchPhone.Text)
+                    {
+                        int bonus = Convert.ToInt32(lblBonus.Text) - Convert.ToInt32(tbBonus.Text);
+                        string newClient = tbFam.Text + ";" + tbName.Text + ";" + tbOtch.Text + ";" + mtbSearchPhone.Text + ";" + bonus;
+                        clientsArray[i] = newClient;
+                        File.WriteAllLines("clients.csv", clientsArray, Encoding.GetEncoding(1251));
+                    }
+                }
+            }
         }
     }
 }

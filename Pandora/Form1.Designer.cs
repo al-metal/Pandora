@@ -46,6 +46,7 @@
             this.tbPriceGame = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblPayment = new System.Windows.Forms.Label();
+            this.btnPay = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,7 +127,7 @@
             this.mtbSearchPhone.Mask = "(000)-000-00-00";
             this.mtbSearchPhone.Name = "mtbSearchPhone";
             this.mtbSearchPhone.Size = new System.Drawing.Size(84, 20);
-            this.mtbSearchPhone.TabIndex = 8;
+            this.mtbSearchPhone.TabIndex = 1;
             this.mtbSearchPhone.KeyUp += new System.Windows.Forms.KeyEventHandler(this.mtbSearchPhone_KeyUp);
             // 
             // label5
@@ -181,7 +182,6 @@
             this.tbPriceGame.Name = "tbPriceGame";
             this.tbPriceGame.Size = new System.Drawing.Size(62, 20);
             this.tbPriceGame.TabIndex = 18;
-            this.tbPriceGame.Text = "0";
             this.tbPriceGame.TextChanged += new System.EventHandler(this.tbPriceGame_TextChanged);
             this.tbPriceGame.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPriceGame_KeyPress);
             // 
@@ -203,11 +203,22 @@
             this.lblPayment.TabIndex = 20;
             this.lblPayment.Text = "0";
             // 
+            // btnPay
+            // 
+            this.btnPay.Location = new System.Drawing.Point(330, 172);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(110, 34);
+            this.btnPay.TabIndex = 21;
+            this.btnPay.Text = "Рассчитать";
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 240);
+            this.Controls.Add(this.btnPay);
             this.Controls.Add(this.lblPayment);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbPriceGame);
@@ -254,6 +265,7 @@
         private System.Windows.Forms.TextBox tbPriceGame;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblPayment;
+        private System.Windows.Forms.Button btnPay;
     }
 }
 
