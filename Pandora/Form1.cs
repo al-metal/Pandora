@@ -17,6 +17,7 @@ namespace Pandora
         Settings settings = new Settings();
         BindingSource binding1 = new BindingSource();
         int percent = Properties.Settings.Default.percent;
+        string data = DateTime.Now.ToString("dd MMMM yyyy HH:mm:ss");
         //проверку на количество бонусов
 
         public Form1()
@@ -56,7 +57,7 @@ namespace Pandora
             if (mtbSearchPhone.MaskCompleted)
             {
                 btnPay.Text = "Идет поиск...";
-                btnPay.Enabled = true;
+                //btnPay.Enabled = true;
                 tbFam.Enabled = true;
                 tbName.Enabled = true;
                 tbOtch.Enabled = true;
@@ -91,6 +92,7 @@ namespace Pandora
                 tbFam.Clear();
                 tbName.Clear();
                 tbOtch.Clear();
+                tbPriceGame.Clear();
                 btnPay.Enabled = false;
                 tbFam.Enabled = false;
                 tbName.Enabled = false;
@@ -125,6 +127,11 @@ namespace Pandora
             {
                 lblPayment.Text = "0";
             }
+
+            if (tbPriceGame.Text == "")
+                btnPay.Enabled = false;
+            else
+                btnPay.Enabled = true;
         }
 
         private void btnPay_Click(object sender, EventArgs e)
@@ -138,18 +145,45 @@ namespace Pandora
                     if (client[3] == mtbSearchPhone.Text)
                     {
                         int bonus = Convert.ToInt32(lblBonus.Text) - Convert.ToInt32(tbBonus.Text);
+                        int priceGame = Convert.ToInt32(tbPriceGame.Text);
+                        int newBonus = priceGame * percent / 100;
+                        bonus += newBonus;
                         string newClient = tbFam.Text + ";" + tbName.Text + ";" + tbOtch.Text + ";" + mtbSearchPhone.Text + ";" + bonus;
                         clientsArray[i] = newClient;
                         File.WriteAllLines("clients.csv", clientsArray, Encoding.GetEncoding(1251));
+                        StreamWriter sw = new StreamWriter("log.txt", true, Encoding.GetEncoding(1251));
+                        sw.WriteLine(tbFam.Text + ";" + tbName.Text + ";" + tbOtch.Text + ";" + mtbSearchPhone.Text + ";" + priceGame + ";" + tbBonus.Text + ";" + newBonus + ";" + bonus + ";" + data);
+                        sw.Close();
                     }
                 }
             }
             if(btnPay.Text == "Сохранить и расчитать")
             {
+                int bonus = Convert.ToInt32(lblBonus.Text) - Convert.ToInt32(tbBonus.Text);
+                int priceGame = Convert.ToInt32(tbPriceGame.Text);
+                int newBonus = priceGame * percent / 100;
+                bonus += newBonus;
                 StreamWriter sw = new StreamWriter("clients.csv", true, Encoding.GetEncoding(1251));
-                sw.WriteLine(tbFam.Text + ";" + tbName.Text + ";" + tbOtch.Text + ";" + mtbSearchPhone.Text + ";" + 0);
+                sw.WriteLine(tbFam.Text + ";" + tbName.Text + ";" + tbOtch.Text + ";" + mtbSearchPhone.Text + ";" + bonus);
+                sw.Close();
+
+                sw = new StreamWriter("log.txt", true, Encoding.GetEncoding(1251));
+                sw.WriteLine(tbFam.Text + ";" + tbName.Text + ";" + tbOtch.Text + ";" + mtbSearchPhone.Text + ";" + priceGame + ";" + tbBonus.Text + ";" + newBonus + ";" + bonus + ";" + data);
                 sw.Close();
             }
+
+            tbFam.Clear();
+            tbName.Clear();
+            tbOtch.Clear();
+            mtbSearchPhone.Clear();
+            tbPriceGame.Clear();
+            btnPay.Enabled = false;
+            tbFam.Enabled = false;
+            tbName.Enabled = false;
+            tbOtch.Enabled = false;
+            tbPriceGame.Enabled = false;
+            tbBonus.Enabled = false;
+            lblBonus.Text = "0";
         }
 
         private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
