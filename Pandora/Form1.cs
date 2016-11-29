@@ -18,7 +18,6 @@ namespace Pandora
         BindingSource binding1 = new BindingSource();
         int percent = Properties.Settings.Default.percent;
         string data = DateTime.Now.ToString("dd MMMM yyyy HH:mm:ss");
-        //проверку на количество бонусов
 
         public Form1()
         {
@@ -202,6 +201,10 @@ namespace Pandora
 
         private void tbBonus_TextChanged(object sender, EventArgs e)
         {
+            int bonusPay = Convert.ToInt32(tbBonus.Text);
+            int bonusClient = Convert.ToInt32(lblBonus.Text);
+            if (bonusPay > bonusClient)
+                tbBonus.Text = bonusClient.ToString();
             if(tbPriceGame.Text != "" & tbPriceGame.Text != "0" & (tbBonus.Text != "" || tbBonus.Text == "0"))
             {
                 int price = Convert.ToInt32(tbPriceGame.Text);
