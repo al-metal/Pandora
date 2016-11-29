@@ -58,7 +58,7 @@
             this.помощьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(480, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(529, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -73,15 +73,17 @@
             // 
             // настройкиToolStripMenuItem
             // 
+            this.настройкиToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.настройкиToolStripMenuItem.Text = "Настройки";
             this.настройкиToolStripMenuItem.Click += new System.EventHandler(this.настройкиToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
+            this.выходToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -95,41 +97,46 @@
             // 
             // оПрограммеToolStripMenuItem
             // 
+            this.оПрограммеToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // tbFam
             // 
             this.tbFam.Enabled = false;
+            this.tbFam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbFam.Location = new System.Drawing.Point(23, 86);
             this.tbFam.Name = "tbFam";
-            this.tbFam.Size = new System.Drawing.Size(100, 20);
+            this.tbFam.Size = new System.Drawing.Size(163, 26);
             this.tbFam.TabIndex = 3;
             // 
             // tbName
             // 
             this.tbName.Enabled = false;
-            this.tbName.Location = new System.Drawing.Point(23, 112);
+            this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbName.Location = new System.Drawing.Point(23, 118);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(100, 20);
+            this.tbName.Size = new System.Drawing.Size(163, 26);
             this.tbName.TabIndex = 4;
             // 
             // tbOtch
             // 
             this.tbOtch.Enabled = false;
-            this.tbOtch.Location = new System.Drawing.Point(23, 138);
+            this.tbOtch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbOtch.Location = new System.Drawing.Point(23, 150);
             this.tbOtch.Name = "tbOtch";
-            this.tbOtch.Size = new System.Drawing.Size(100, 20);
+            this.tbOtch.Size = new System.Drawing.Size(163, 26);
             this.tbOtch.TabIndex = 5;
             // 
             // tbBonus
             // 
             this.tbBonus.Enabled = false;
-            this.tbBonus.Location = new System.Drawing.Point(356, 73);
+            this.tbBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbBonus.Location = new System.Drawing.Point(418, 34);
             this.tbBonus.Name = "tbBonus";
-            this.tbBonus.Size = new System.Drawing.Size(100, 20);
+            this.tbBonus.Size = new System.Drawing.Size(100, 26);
             this.tbBonus.TabIndex = 6;
             this.tbBonus.Text = "0";
             this.tbBonus.TextChanged += new System.EventHandler(this.tbBonus_TextChanged);
@@ -137,37 +144,41 @@
             // 
             // mtbSearchPhone
             // 
-            this.mtbSearchPhone.Location = new System.Drawing.Point(39, 36);
+            this.mtbSearchPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mtbSearchPhone.Location = new System.Drawing.Point(51, 36);
             this.mtbSearchPhone.Mask = "(000)-000-00-00";
             this.mtbSearchPhone.Name = "mtbSearchPhone";
-            this.mtbSearchPhone.Size = new System.Drawing.Size(84, 20);
+            this.mtbSearchPhone.Size = new System.Drawing.Size(123, 26);
             this.mtbSearchPhone.TabIndex = 1;
             this.mtbSearchPhone.KeyUp += new System.Windows.Forms.KeyEventHandler(this.mtbSearchPhone_KeyUp);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(191, 76);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(192, 37);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 13;
             this.label5.Text = "Бонусы:";
             // 
             // lblNumber7
             // 
             this.lblNumber7.AutoSize = true;
+            this.lblNumber7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblNumber7.Location = new System.Drawing.Point(18, 39);
             this.lblNumber7.Name = "lblNumber7";
-            this.lblNumber7.Size = new System.Drawing.Size(19, 13);
+            this.lblNumber7.Size = new System.Drawing.Size(27, 20);
             this.lblNumber7.TabIndex = 14;
             this.lblNumber7.Text = "+7";
             // 
             // lblBonus
             // 
             this.lblBonus.AutoSize = true;
-            this.lblBonus.Location = new System.Drawing.Point(236, 76);
+            this.lblBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBonus.Location = new System.Drawing.Point(266, 37);
             this.lblBonus.Name = "lblBonus";
-            this.lblBonus.Size = new System.Drawing.Size(13, 13);
+            this.lblBonus.Size = new System.Drawing.Size(18, 20);
             this.lblBonus.TabIndex = 15;
             this.lblBonus.Text = "0";
             this.lblBonus.TextChanged += new System.EventHandler(this.lblBonus_TextChanged);
@@ -175,27 +186,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(292, 76);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(322, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 16;
             this.label1.Text = "потратить";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(191, 105);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(192, 66);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.Size = new System.Drawing.Size(92, 20);
             this.label6.TabIndex = 17;
             this.label6.Text = "Цена игры:";
             // 
             // tbPriceGame
             // 
             this.tbPriceGame.Enabled = false;
-            this.tbPriceGame.Location = new System.Drawing.Point(261, 102);
+            this.tbPriceGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbPriceGame.Location = new System.Drawing.Point(290, 63);
             this.tbPriceGame.Name = "tbPriceGame";
-            this.tbPriceGame.Size = new System.Drawing.Size(62, 20);
+            this.tbPriceGame.Size = new System.Drawing.Size(62, 26);
             this.tbPriceGame.TabIndex = 18;
             this.tbPriceGame.TextChanged += new System.EventHandler(this.tbPriceGame_TextChanged);
             this.tbPriceGame.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPriceGame_KeyPress);
@@ -203,25 +217,28 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(329, 105);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(358, 66);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
+            this.label7.Size = new System.Drawing.Size(82, 20);
             this.label7.TabIndex = 19;
             this.label7.Text = "К оплате:";
             // 
             // lblPayment
             // 
             this.lblPayment.AutoSize = true;
-            this.lblPayment.Location = new System.Drawing.Point(381, 105);
+            this.lblPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPayment.Location = new System.Drawing.Point(446, 66);
             this.lblPayment.Name = "lblPayment";
-            this.lblPayment.Size = new System.Drawing.Size(13, 13);
+            this.lblPayment.Size = new System.Drawing.Size(18, 20);
             this.lblPayment.TabIndex = 20;
             this.lblPayment.Text = "0";
             // 
             // btnPay
             // 
             this.btnPay.Enabled = false;
-            this.btnPay.Location = new System.Drawing.Point(330, 172);
+            this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnPay.Location = new System.Drawing.Point(407, 142);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(110, 34);
             this.btnPay.TabIndex = 21;
@@ -232,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 240);
+            this.ClientSize = new System.Drawing.Size(529, 187);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.lblPayment);
             this.Controls.Add(this.label7);
