@@ -58,11 +58,19 @@ namespace Pandora
         {
             if (mtbSearchPhone.MaskCompleted)
             {
+                btnPay.Enabled = true;
+                tbFam.Enabled = true;
+                tbName.Enabled = true;
+                tbOtch.Enabled = true;
+                tbPriceGame.Enabled = true;
+                tbBonus.Enabled = true;
+                bool b = false;
                 string[] clientsArray = File.ReadAllLines("clients.csv", Encoding.GetEncoding(1251));
                 if(clientsArray.Length > 0)
                 {
                     foreach(string str in clientsArray)
                     {
+                        btnPay.Text = "Идет поиск...";
                         string[] client = str.Split(';');
                         if(client[3] == mtbSearchPhone.Text)
                         {
@@ -70,9 +78,28 @@ namespace Pandora
                             tbFam.Text = client[0];
                             tbOtch.Text = client[2];
                             lblBonus.Text = client[4];
+                            b = true;
+                            btnPay.Text = "Рассчитать";
                         }
                     }
                 }
+                if (!b)
+                {
+                    btnPay.Text = "Сохранить и расчитать";
+                }
+            }
+            else
+            {
+                tbFam.Clear();
+                tbName.Clear();
+                tbOtch.Clear();
+                btnPay.Enabled = false;
+                tbFam.Enabled = false;
+                tbName.Enabled = false;
+                tbOtch.Enabled = false;
+                tbPriceGame.Enabled = false;
+                tbBonus.Enabled = false;
+                lblBonus.Text = "0";
             }
         }
 
@@ -89,10 +116,17 @@ namespace Pandora
 
         private void tbPriceGame_TextChanged(object sender, EventArgs e)
         {
-            int price = Convert.ToInt32(tbPriceGame.Text);
-            int bonus = Convert.ToInt32(tbBonus.Text);
-            int payment = price - bonus;
-            lblPayment.Text = payment.ToString();
+            if(tbPriceGame.Text != "")
+            {
+                int price = Convert.ToInt32(tbPriceGame.Text);
+                int bonus = Convert.ToInt32(tbBonus.Text);
+                int payment = price - bonus;
+                lblPayment.Text = payment.ToString();
+            }
+            else
+            {
+                lblPayment.Text = "0";
+            }
         }
 
         private void btnPay_Click(object sender, EventArgs e)

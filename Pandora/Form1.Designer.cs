@@ -93,6 +93,7 @@
             // 
             // tbFam
             // 
+            this.tbFam.Enabled = false;
             this.tbFam.Location = new System.Drawing.Point(23, 86);
             this.tbFam.Name = "tbFam";
             this.tbFam.Size = new System.Drawing.Size(100, 20);
@@ -100,6 +101,7 @@
             // 
             // tbName
             // 
+            this.tbName.Enabled = false;
             this.tbName.Location = new System.Drawing.Point(23, 112);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(100, 20);
@@ -107,6 +109,7 @@
             // 
             // tbOtch
             // 
+            this.tbOtch.Enabled = false;
             this.tbOtch.Location = new System.Drawing.Point(23, 138);
             this.tbOtch.Name = "tbOtch";
             this.tbOtch.Size = new System.Drawing.Size(100, 20);
@@ -114,6 +117,7 @@
             // 
             // tbBonus
             // 
+            this.tbBonus.Enabled = false;
             this.tbBonus.Location = new System.Drawing.Point(356, 73);
             this.tbBonus.Name = "tbBonus";
             this.tbBonus.Size = new System.Drawing.Size(100, 20);
@@ -178,6 +182,7 @@
             // 
             // tbPriceGame
             // 
+            this.tbPriceGame.Enabled = false;
             this.tbPriceGame.Location = new System.Drawing.Point(261, 102);
             this.tbPriceGame.Name = "tbPriceGame";
             this.tbPriceGame.Size = new System.Drawing.Size(62, 20);
@@ -205,11 +210,11 @@
             // 
             // btnPay
             // 
+            this.btnPay.Enabled = false;
             this.btnPay.Location = new System.Drawing.Point(330, 172);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(110, 34);
             this.btnPay.TabIndex = 21;
-            this.btnPay.Text = "Рассчитать";
             this.btnPay.UseVisualStyleBackColor = true;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
