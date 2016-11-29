@@ -47,6 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblPayment = new System.Windows.Forms.Label();
             this.btnPay = new System.Windows.Forms.Button();
+            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +65,7 @@
             // новыйКлиентToolStripMenuItem
             // 
             this.новыйКлиентToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настройкиToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.новыйКлиентToolStripMenuItem.Name = "новыйКлиентToolStripMenuItem";
             this.новыйКлиентToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
@@ -72,7 +74,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -218,6 +220,13 @@
             this.btnPay.UseVisualStyleBackColor = true;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
+            // настройкиToolStripMenuItem
+            // 
+            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.настройкиToolStripMenuItem.Text = "Настройки";
+            this.настройкиToolStripMenuItem.Click += new System.EventHandler(this.настройкиToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,7 +251,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Лазертаг Pandora";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Activated += new System.EventHandler(this.Form1_Activated);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -271,6 +280,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
     }
 }
 

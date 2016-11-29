@@ -14,7 +14,9 @@ namespace Pandora
     public partial class Form1 : Form
     {
         NewClient newClient = new NewClient();
+        Settings settings = new Settings();
         BindingSource binding1 = new BindingSource();
+        int percent = Properties.Settings.Default.percent;
         //проверку на количество бонусов
 
         public Form1()
@@ -31,11 +33,6 @@ namespace Pandora
         private void новыйКлиентToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             newClient.ShowDialog();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            string[] clientsArray = File.ReadAllLines("clients.csv", Encoding.GetEncoding(1251));
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,6 +55,7 @@ namespace Pandora
         {
             if (mtbSearchPhone.MaskCompleted)
             {
+                btnPay.Text = "Идет поиск...";
                 btnPay.Enabled = true;
                 tbFam.Enabled = true;
                 tbName.Enabled = true;
@@ -70,7 +68,7 @@ namespace Pandora
                 {
                     foreach(string str in clientsArray)
                     {
-                        btnPay.Text = "Идет поиск...";
+                        
                         string[] client = str.Split(';');
                         if(client[3] == mtbSearchPhone.Text)
                         {
@@ -151,6 +149,20 @@ namespace Pandora
                 StreamWriter sw = new StreamWriter("clients.csv", true, Encoding.GetEncoding(1251));
                 sw.WriteLine(tbFam.Text + ";" + tbName.Text + ";" + tbOtch.Text + ";" + mtbSearchPhone.Text + ";" + 0);
                 sw.Close();
+            }
+        }
+
+        private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            settings.ShowDialog();
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            int percent = Properties.Settings.Default.percent;
+            if (percent == 0)
+            {
+                settings.ShowDialog();
             }
         }
     }
