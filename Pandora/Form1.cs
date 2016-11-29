@@ -146,6 +146,12 @@ namespace Pandora
                     }
                 }
             }
+            if(btnPay.Text == "Сохранить и расчитать")
+            {
+                StreamWriter sw = new StreamWriter("clients.csv", true, Encoding.GetEncoding(1251));
+                sw.WriteLine(tbFam.Text + ";" + tbName.Text + ";" + tbOtch.Text + ";" + mtbSearchPhone.Text + ";" + 0);
+                sw.Close();
+            }
         }
     }
 }
