@@ -199,5 +199,22 @@ namespace Pandora
                 settings.ShowDialog();
             }
         }
+
+        private void tbBonus_TextChanged(object sender, EventArgs e)
+        {
+            if(tbPriceGame.Text != "" & tbPriceGame.Text != "0" & (tbBonus.Text != "" || tbBonus.Text == "0"))
+            {
+                int price = Convert.ToInt32(tbPriceGame.Text);
+                int bonus = Convert.ToInt32(tbBonus.Text);
+                int payment = price - bonus;
+                lblPayment.Text = payment.ToString();
+                btnPay.Enabled = true;
+            }
+            if (tbBonus.Text == "")
+            {
+                lblPayment.Text = "";
+                btnPay.Enabled = false;
+            }
+        }
     }
 }
