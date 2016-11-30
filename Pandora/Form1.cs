@@ -117,8 +117,10 @@ namespace Pandora
         {
             if(tbPriceGame.Text != "")
             {
+                int bonus = 0;
+                if(tbBonus.Text != "")
+                    bonus = Convert.ToInt32(tbBonus.Text);
                 int price = Convert.ToInt32(tbPriceGame.Text);
-                int bonus = Convert.ToInt32(tbBonus.Text);
                 int payment = price - bonus;
                 lblPayment.Text = payment.ToString();
             }
@@ -143,7 +145,10 @@ namespace Pandora
                     string[] client = clientsArray[i].Split(';');
                     if (client[3] == mtbSearchPhone.Text)
                     {
-                        int bonus = Convert.ToInt32(lblBonus.Text) - Convert.ToInt32(tbBonus.Text);
+                        int bonusVichet = 0;
+                        if (tbBonus.Text != "")
+                            bonusVichet = Convert.ToInt32(tbBonus.Text);
+                        int bonus = Convert.ToInt32(lblBonus.Text) - bonusVichet;
                         int priceGame = Convert.ToInt32(tbPriceGame.Text);
                         int newBonus = priceGame * percent / 100;
                         bonus += newBonus;
@@ -158,7 +163,10 @@ namespace Pandora
             }
             if(btnPay.Text == "Сохранить и расчитать")
             {
-                int bonus = Convert.ToInt32(lblBonus.Text) - Convert.ToInt32(tbBonus.Text);
+                int bonusVichet = 0;
+                if (tbBonus.Text != "")
+                    bonusVichet = Convert.ToInt32(tbBonus.Text);
+                int bonus = Convert.ToInt32(lblBonus.Text) - bonusVichet;
                 int priceGame = Convert.ToInt32(tbPriceGame.Text);
                 int newBonus = priceGame * percent / 100;
                 bonus += newBonus;
@@ -201,7 +209,9 @@ namespace Pandora
 
         private void tbBonus_TextChanged(object sender, EventArgs e)
         {
-            int bonusPay = Convert.ToInt32(tbBonus.Text);
+            int bonusPay = 0;
+            if(tbBonus.Text != "")
+            bonusPay = Convert.ToInt32(tbBonus.Text);
             int bonusClient = Convert.ToInt32(lblBonus.Text);
             if (bonusPay > bonusClient)
                 tbBonus.Text = bonusClient.ToString();
